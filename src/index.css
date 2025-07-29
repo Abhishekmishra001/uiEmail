@@ -1,0 +1,147 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.sidebar {
+  flex: 1;
+  min-width: 220px;
+  max-width: 250px;
+  border-right: 1px solid #ddd;
+  padding: 16px;
+}
+
+.mail-list {
+  flex: 2;
+  min-width: 300px;
+  border-right: 1px solid #ddd;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.message-box {
+  flex: 3;
+  min-width: 300px;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.search-input,
+.sender-input,
+.reply-textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.email-card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.email-card.highlight {
+  background-color: #e6fdf6;
+  border-left: 4px solid #10b981;
+}
+
+.email-meta {
+  font-size: 12px;
+  text-align: right;
+}
+
+.email-sender {
+  font-weight: bold;
+  color: #b91c1c;
+}
+
+.email-subject {
+  font-weight: bold;
+}
+
+.email-preview {
+  color: #666;
+  font-size: 14px;
+}
+
+.attach-box {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f9f9f9;
+}
+
+.btn-send,
+.btn-discard,
+.btn-compose,
+.btn-add-account {
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-send {
+  background-color: #10b981;
+  color: white;
+  margin-right: 10px;
+}
+
+.btn-discard {
+  background-color: #e5e7eb;
+}
+
+.btn-compose {
+  background-color: #22c55e;
+  color: white;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.btn-add-account {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .app-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .sidebar,
+  .mail-list,
+  .message-box {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .message-box {
+    border-bottom: none;
+  }
+}
